@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "Starting the pre-production script"
+if 
+  sudo apt update && sudo apt upgrade -y 
+then
+  echo "The update & upgrade has been done successfully"
+fi
+if 
+    rm -rf node_modules package-lock.json .next/
+    then
+        echo "Removed Previous files"
+fi
+if    
+npm install&&npm run build
+then
+    echo "The build has been done successfully"
+fi
